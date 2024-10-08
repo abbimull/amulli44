@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Inputting meta tags -->
+    <meta charset="UTF-8"> <!-- Helps defines the character encoding for the HTML document -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ensures that the webpage will scale on mobile devices -->
+    <title>Contact Me</title> <!-- Title of the webpage that will be displayed in the browser tab -->
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+    <!-- For the navigation bar -->
+    <nav>
+        <ul>
+            <!-- Navigation links for the three webpages -->
+            <li><a href="index.html">Home</a></li> <!-- Link to the Home page -->
+            <li><a href="about.html">About</a></li> <!-- Link to the About page -->
+            <li><a href="contact.html">Contact</a></li> <!-- Link to the Contact page -->
+        </ul>
+    </nav>
+
+    <!-- Contact Form for the contact page -->
+    <section>
+        <!-- Section header telling users to submit their email -->
+        <h2>Please submit your email to contact me</h2>
+       
+        <!-- Form so it can collect user input -->
+        <form id="contactForm"> <!-- Form ID for referencing in JavaScript -->
+           <!-- The label and input field for the user's name -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+             <!-- The label and input field for the user's email address -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+             <!-- The submit button so it can send the form data -->
+            <button type="submit">Submit</button>
+        </form>
+        <!-- Display the form submission messages from JavaScript -->
+        <p id="formMessage"></p>
+    </section>
+     <!-- Link to the JavaScript file so it can add functionality -->
+    <script src="scripts.js"></script>
+</body>
+</html>
