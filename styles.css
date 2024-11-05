@@ -54,3 +54,23 @@ button {
 button:hover {
     background-color: #555;
 }
+
+/* About section styling */
+.about-section {
+    padding: 2em;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-section h2 {
+    font-size: 1.8em;
+    color: #333;
+    margin-top: 1em;
+}
+
+.about-section p {
+    font-size: 1.1em;
+    margin-top: 0.5em;
+}
