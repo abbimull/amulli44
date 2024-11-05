@@ -1,10 +1,9 @@
-// Import any necessary modules
-import express, { urlencoded } from 'express';
+const express = require('express');
 const app = express();
 const port = 3000; //Help define which port the server will run on
 
 // Allows for nesting objects in URL-encoded data if it is needed
-app.use(urlencoded({ extended: true })); 
+app.use(express.urlencoded({ extended: true })); 
 
 // Give a route for the main page
 app.get('/', (req, res) => {
@@ -24,5 +23,5 @@ app.post('/submit-form', (req, res) => {
 // Listens on the specified port and also starts the server
 app.listen(port, () => {
     // When the server starts successfully, it logs a message
-    console.log(`Server running on http://localhost:${port}`);
+    console.log(`Server running on http://amulli44localhost-${port}`);
 });
