@@ -1,6 +1,11 @@
 const express = require('express');
+const path = require('path');
 const app = express();
 const port = 3000; //Help define which port the server will run on
+//Set up the middleware to interact with my static files
+app.use(express.static(__dirname));
+app.use('/images', express.static(path.join(__dirname, 'images')));
+app.use('/pages', express.static(path.join(__dirname, 'pages')));
 
 // Allows for nesting objects in URL-encoded data if it is needed
 app.use(express.urlencoded({ extended: true })); 
@@ -23,5 +28,5 @@ app.post('/submit-form', (req, res) => {
 // Listens on the specified port and also starts the server
 app.listen(port, () => {
     // When the server starts successfully, it logs a message
-    console.log(`Server running on http://amulli44localhost-${port}`);
+    console.log(`Server running on http://localhost:${port}`);
 });
